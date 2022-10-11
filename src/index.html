@@ -78,17 +78,10 @@
     <!-- Plugin used-->
 
     <script>
-      var imageAddr = "test.jpg"; 
-      
+              var imageAddr = "test.jpg"; 
+    
 
-      var xhr = new XMLHttpRequest();
-      xhr.open('HEAD', 'test.jpg', true);
-      xhr.onreadystatechange = function(){
-          if ( xhr.readyState == 4 ) {
-              if ( xhr.status == 200 ) {
-               console.log('Size in bytes: ' + xhr.getResponseHeader('Content-Length'));
-
-               var downloadSize = xhr.getResponseHeader('Content-Length'); //bytes
+               var downloadSize = 2109499; //bytes
                
                function ShowProgressMessage(msg) {
                   if (console) {
@@ -152,14 +145,6 @@
                   }
       
               }
-
-              } else {
-               alert('ERROR');
-              }
-          }
-      };
-
-      xhr.send(null);
 
 
 
