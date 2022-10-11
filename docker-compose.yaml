@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx_net
+    restart: unless-stopped
+    ports:
+      - "4700:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
+
+
+  
+  ###############################################################
+  ################# Media Server Configuration ##################
+
+  ## docker ps -aq | xargs docker stop | xargs docker rm
+
